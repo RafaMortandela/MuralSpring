@@ -23,7 +23,7 @@ public class WebSecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.authorizeHttpRequests(auth ->
-                        auth.requestMatchers("/cadastro", "/css/**", "/js/**", "/images/**")
+                        auth.requestMatchers("/cadastro", "/static/css/**", "/js/**", "/images/**")
                                 .permitAll()
                                 .anyRequest().authenticated()
                 )
